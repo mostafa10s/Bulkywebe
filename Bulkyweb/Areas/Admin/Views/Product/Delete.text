@@ -1,0 +1,70 @@
+﻿
+@model Product
+
+<form method="post" >
+    <div class="border p-3 mt-4">
+        <div class="row pg-2"> 
+            <h2 class="text-primary">
+              Product
+         <hr/>
+        </h2>  
+        </div>
+
+        <div class="mb-3 p-1">
+            <label asp-for="Titel">  </label>
+            <input  asp-for="Titel" disabled class="form-control"/>
+            
+        </div>
+            <div class="mb-3 p-0">
+            <label asp-for="Description"> </label>
+            <textarea  asp-for="Description" disabled class="form-control"></textarea>
+              
+        </div> 
+       
+            <div class="mb-3 p-0">
+            <label asp-for="ISBN"> </label>
+            <input  asp-for="ISBN" disabled class="form-control"/>
+                
+        </div>
+        <div class="mb-3 p-0">
+            <label asp-for="Auther"> </label>
+            <input  asp-for="Auther" class="form-control"/>
+                 <span asp-validation-for="Auther" class="text-danger" ></span>
+        </div>
+        
+            <div class="mb-3 p-0">
+            <label asp-for="Listprice"> </label>
+            <input  asp-for="Listprice" disabled class="form-control"/>
+                
+        </div>
+
+        
+            <div class="mb-3 p-0">
+            <label asp-for="price"> </label>
+            <input  asp-for="price" disabled class="form-control"/>
+                 
+        </div>
+        
+            <div class="mb-3 p-0">
+            <label asp-for="price50"> </label>
+            <input  asp-for="price50" disabled class="form-control"/>
+                
+        </div>
+         
+            <div class="mb-3 p-0">
+            <label asp-for="price100"> </label>
+            <input  asp-for="price100" disabled class="form-control"/>
+           
+        </div>
+      
+    </div>
+     <button  type="submit" class="btn btn-danger"style="width:150px">Delete</button>
+
+       <a asp-controller="Product" asp-action="Index" class="btn btn-primary text-end" >Back to list </a>
+       
+</form>
+@section Scripts{
+@{
+    <partial name="_ValidationScriptsPartial" />
+};
+}
